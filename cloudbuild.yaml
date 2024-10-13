@@ -11,4 +11,4 @@ steps:
            '--allow-unauthenticated']
 
 options:
-  logging: GCS_ONLY
+  logging: REGIONAL_USER_OWNED_BUCKET
