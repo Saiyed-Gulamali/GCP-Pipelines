@@ -1,0 +1,8 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/thermal-creek-426920-k1/gulamali-100962492/$COMMIT_SHA', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/thermal-creek-426920-k1/gulamali-100962492/$COMMIT_SHA']
+
+options:
+  logging: REGIONAL_USER_OWNED_BUCKET
