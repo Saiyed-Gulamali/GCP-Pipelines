@@ -12,3 +12,7 @@ steps:
 
 options:
   logging: REGIONAL_USER_OWNED_BUCKET
+
+logsBucket: gs://gulamali-100962492-logbucket
+
+  
