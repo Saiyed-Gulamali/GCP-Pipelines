@@ -11,7 +11,7 @@ steps:
            '--allow-unauthenticated']
 
 options:
-  logging: REGIONAL_USER_OWNED_BUCKET
+  logging: GCS_ONLY
 
 logsBucket: gs://gulamali-100962492-logbucket
 
