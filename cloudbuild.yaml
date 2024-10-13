@@ -3,6 +3,9 @@ steps:
     args: ['build', '-t', 'us-central1-docker.pkg.dev/thermal-creek-426920-k1/gulamali-100962492/$COMMIT_SHA', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/thermal-creek-426920-k1/gulamali-100962492/$COMMIT_SHA']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args: ['run', 'deploy', 'gulamali-100962492', '--image', 'us-central1-docker.pkg.dev/thermal-creek-426920-k1/gulamali-100962492/$COMMIT_SHA', '--region', 'us-central1', '--allow-unauthenticated']
 
 options:
   logging: GCS_ONLY
